@@ -2,24 +2,27 @@
 
 ## General info
 
-The project concerns the anomaly detection in credit cards transactions using machine learning models and Autoencoders. 
-The main aim of this project is predict whether a given transaction was a fraud or not. The analysis includes data analysis, data preparation and creation model by using Isolation Forest, Local Outlier Factor, Support Vector Machine (OneClassSVM) algorithms and autoencoder model.
+This project focuses on detecting anomalies in credit card transactions using machine learning techniques and autoencoders. The primary objective is to predict whether a given transaction is fraudulent or legitimate. The workflow includes comprehensive data analysis, preprocessing, and model development using algorithms such as Isolation Forest, Local Outlier Factor (LOF), One-Class Support Vector Machine (OneClassSVM), and deep learning-based autoencoder models.
 
 ### Dataset
 
 The dataset contains transactions made by credit cards in two days in 2013 by European cardholders and contains frauds as well. It comes from Kaggle and can be find [here](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
 
 ## Motivation
-The aim of this project is predict whether a given transaction was a fraud. The frauds in the credit cards industry are stealing or using stolen cards, or take more an aggressive form such as account takeover, counterfeiting and much more. The magnitude of credit card frauds is growing larger each day due to ever-increasing online transactions. Anomaly detection is an unsupervised data processing technique to detect anomalies from the dataset. Anomalies are data points that stand out amongst other data points in the dataset and do not fit the normal behavior in the data. These data points or observations deviate from the dataset’s normal behavioral patterns. The anomaly detection is very useful to detect fraud transactions just like in this case.
+The objective of this project is to predict whether a given credit card transaction is fraudulent. Credit card fraud can take various forms — from the use of stolen cards to more aggressive tactics such as account takeovers and counterfeiting. With the rapid growth of online transactions, the scale and complexity of such frauds continue to rise.
+
+Anomaly detection, an unsupervised machine learning technique, plays a crucial role in identifying such fraudulent activities. It works by spotting unusual data points—called anomalies—that deviate significantly from typical patterns in the dataset. These anomalies often signal behavior that doesn't align with normal usage, making this technique particularly effective in identifying suspicious or fraudulent transactions.
 
 ## Project contains:
 - fraud detection using machine learning models - **Fraud_detection.ipynb**
 - fraud detection using autoencoder model - **Fraud_Autoencoder.ipynb**
 
 ## Summary
-The main aim of this project was prediction whether a given transaction was a fraud or not. The analysis included data analysis, data preparation and creation models by using Isolation Forest, Local Outlier Factor, Support Vector Machine (OneClassSVM) algorithms. In the first approach I evaluated our models with a few methods to check which model is the best. I used a accuracy score, f1 score, recall and confusion matrix. Finally the best model was One Class SVM with recall value 84%. That model has the lowest possible False Negatives rate and will be not miss many anomalies.
+The primary goal of this project was to predict whether a given credit card transaction was fraudulent. The process involved extensive data analysis, data preprocessing, and the development of machine learning models using Isolation Forest, Local Outlier Factor (LOF), and One-Class Support Vector Machine (OneClassSVM).
 
-The second part of analysis I used autoencoders model to fraud anomaly detection. I built the model only on one-class examples (normal transactions) with no suspicious transactions. I evaluated our model with a few methods such as reconstruction error, recall and confusion matrix. The model captures 83% of the anomaly data points (based on recall value) and has the low False Negatives rate and will be not miss many anomalies.
+In the first phase, I evaluated the performance of each model using various metrics, including accuracy, F1 score, recall, and the confusion matrix. Among these, One-Class SVM emerged as the most effective, achieving a recall of 84%. This indicates the model successfully identified the majority of fraudulent cases, minimizing the false negatives — which is critical in fraud detection scenarios.
+
+In the second phase, I implemented an autoencoder-based approach for anomaly detection. The model was trained solely on normal (non-fraudulent) transactions, excluding any suspicious data. I assessed its performance using reconstruction error, recall, and the confusion matrix. The autoencoder was able to detect 83% of the anomalies based on recall, also maintaining a low false negative rate — ensuring that most fraud cases were successfully identified.
 
 ## Technologies
 
